@@ -1,5 +1,5 @@
 import express from 'npm:express';
-import express from 'npm:cors';
+import cors from 'npm:cors';
 
 import usersRoutes from './routes/users.routes.ts';
 
