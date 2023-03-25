@@ -1,4 +1,5 @@
 import express from 'npm:express';
+import express from 'npm:cors';
 
 import usersRoutes from './routes/users.routes.ts';
 
@@ -7,6 +8,7 @@ import './config/db.ts';
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 app.get("/", (req, res) => {
     return res.send({
