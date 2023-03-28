@@ -15,11 +15,7 @@ export const getUser = async (req: Request, res: Response) => {
 }
 
 export const createUser = async (req: Request, res: Response) => {
-    const newUser = {
-        firstname: req.body.firstname,
-        lastname: req.body.lastname,
-    }
-    const user = await User.create(newUser);
+    const user = await User.create(req.body);
     return res.send(user);
 }
 
